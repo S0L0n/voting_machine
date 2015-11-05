@@ -1,8 +1,13 @@
 <head>	<link rel="stylesheet" type="text/css" href="css.css"><meta charset="utf-8"/></head>
 <body>
     <?php
-        $voto = " ";
         session_start();
+        $voto = " ";
+        if(isset($_GET['return'])){
+            if($_GET['return'] == 1){
+                $_SESSION['codigo'] = '';
+            }else{}
+        }else{}
         if(isset($_SESSION['codigo'])){     
             $voto = $_SESSION['codigo']; 
         }else{}
