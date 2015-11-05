@@ -1,33 +1,32 @@
 body{background-color: gray; }
 #formulario{	
         position: absolute;
-	background-color: #f1f9f7;
+	background-color: white;
 	width:500px; 
  	height:260px;
  	margin-top: 3%;
  	margin-left: 1%;
 }
 #botoes_alinhados{
-
 	position:relative;
-	text-align: center;
-  
+	text-align: center; 
 }
 #botoes{
         background-color:#696464;
-	position:absolute;
-	left: 39%;
-	top: 9%;
-	padding: 5px;
+    	position:absolute;
+	    left: 39%;
+	    top: 9%;
+	    padding: 5px;
         width: 300px;
-}
+	    border: none;	
+	}
 input[type="button"]{
 	background-color: #1e1c1c;
 	color: #fff;
 	padding: 10px;
 	}
 #numvoto{
-	position: absolute;
+     	position: absolute;
         left: 30%;
         top: 40%;
         text-align: center;
@@ -40,13 +39,23 @@ input[type="button"]{
 #branco{
 	background-color: #fff;
         color: black;
+		border:none;
 }
 #corrigir{
 	background-color: #ff0101;
+	border:none;
 }
 #confirmar{
-	background-color: #61e30e;
+	background-color: #00FF00;
         padding: 10px;
+		border:none;
+}
+#tabela{
+        position: absolute;
+        left:24px;
+        width: 150px;
+        top:32%;
+        background-color: white;
 }
 #rodape{
 	position:fixed;

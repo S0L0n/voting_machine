@@ -2,16 +2,13 @@
 class Voto{
     
     public $_Nvoto;
-    public $_arquivo;
     
     function __construct($voto) {
         $this->_Nvoto = $voto;
-        $this->_arquivo = "votos.txt";
     }
     public function votar($voto){
-        $arquivo = $this->_arquivo;
+        $arquivo = "votos.txt";
         $conteudo = $voto."\r\n";
-        
         $abertura = fopen("$arquivo","a+");
         $gravacao = fwrite($abertura,$conteudo);
         fclose($abertura);
@@ -27,5 +24,29 @@ class Voto{
         session_start();
         $_SESSION['codigo'] = '';
         header("location:index.php"); 
+    }
+    public function votarBranco(){
+        $arquivo  = "Branco.txt";
+        $abertura = fopen("$arquivo","r+");
+        $ler      = fread($abertura, filesize($arquivo));
+        fclose($abertura);
+        $abertura = fopen("$arquivo","w+");
+        $conteudo = $ler + 1 . "\r\n";
+        echo $ler."+ 1";
+        $gravacao = fwrite($abertura,$conteudo);
+        fclose($abertura);
+        header("location:index.php?return=1");
+    }
+    public function votarNulo(){
+        $arquivo = "Nulo.txt";
+        $abertura = fopen("$arquivo","r+");
+        $ler      = fread($abertura, filesize($arquivo));
+        fclose($abertura);
+        $abertura = fopen("$arquivo","w+");
+        $conteudo = $ler + 1 . "\r\n";
+        echo $ler."+ 1";
+        $gravacao = fwrite($abertura,$conteudo);
+        fclose($abertura);
+        header("location:index.php?return=1"); 
     }
 }

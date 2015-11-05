@@ -14,7 +14,7 @@
     ?>
    <div id="formulario">
       <form method="POST" action="Urna_eletronica.php" >
-          <input name="ncandidato" type="text" value="<?php echo $voto; ?>" placeholder="Numero do Candidato" id="numvoto"/><br>
+          <input name="ncandidato" type="text" value="<?php echo $voto; ?>" Use readonly="true" placeholder="Número do Candidato" id="numvoto"/><br>
    </div>
           <center>
           <div id="botoes">
@@ -36,6 +36,22 @@
              </div>
           </div>
           </center> 
+<table id="tabela">
+<tr>
+    <td><b>Candidado</b></td>
+    <td><b>Número</b></td>
+</tr>
+<tr>
+    <td><b>Dilma</b></td>
+    <td><b>13</b></td>
+</tr>
+<tr>
+    <td><b>Aécio</b></td>
+    <td><b>45</b></td>
+</tr>
+    <td><b>Marina</b></td>
+	<td><b>24</b></td>
+</table>
    <div id="rodape">
        <center>
        <p align="center"><h6> &copy;Emanuel Codes</h6></p>
