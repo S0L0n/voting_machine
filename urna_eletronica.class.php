@@ -1,5 +1,4 @@
 <?php
-
 class Voto{
     
     public $_Nvoto;
@@ -27,8 +26,6 @@ class Voto{
     public function corrigirVoto(){
         session_start();
         $_SESSION['codigo'] = '';
-        header("location:index.php");
-        
+        header("location:index.php"); 
     }
-    
 }
