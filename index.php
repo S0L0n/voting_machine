@@ -3,20 +3,14 @@
     <?php
         $voto = " ";
         session_start();
-        if(isset($_GET['return'])){
-            if($_GET['return'] == 1){
-                echo "Finalizado, Obrigado por Fazer sua escolha.  <b><a href='index.php'>OK</a></b>";
-                $_SESSION['codigo'] = '';
-            }else{}
-        }else{}
         if(isset($_SESSION['codigo'])){     
             $voto = $_SESSION['codigo']; 
         }else{}
     ?>
-    <div id="formulario">
+   <div id="formulario">
       <form method="POST" action="Urna_eletronica.php" >
           <input name="ncandidato" type="text" value="<?php echo $voto; ?>" placeholder="Numero do Candidato" id="numvoto"/><br>
-    </div>
+   </div>
           <center>
           <div id="botoes">
 		  <a href="contavoto.php?cod=1"><input type="button" value="1"></a>
@@ -28,15 +22,18 @@
 		  <a href="contavoto.php?cod=7"><input type="button" value="7"></a>
 		  <a href="contavoto.php?cod=8"><input type="button" value="8"></a>
 		  <a href="contavoto.php?cod=9"><input type="button" value="9"></a><br>
-                  <a href="contavoto.php?cod=0"><input type="button" value="0"></a><br>   
-          </div>
-          <div id="botoes_alinhados">
+                  <a href="contavoto.php?cod=0"><input type="button" value="0"></a><br>            
+             <div id="botoes_alinhados">
                   <input name="votar" value="Confirma" type="submit" id="confirmar"/>
                   <a href="corrigir.php"><input name="Corrigir" value="Corrigir" type="button" id="corrigir"></a>
                   <a href="urna_eletronica.php"><input name="Branco" value="Branco" type="button" id="branco"/></a>
-          </div>
       </form>
-<div id="rodape">
-     <p align="center"><h6> &copy;Emanuel Codes</h6></p>
-</div>
+             </div>
+          </div>
+          </center> 
+   <div id="rodape">
+       <center>
+       <p align="center"><h6> &copy;Emanuel Codes</h6></p>
+       </center>
+   </div>       
 </body>

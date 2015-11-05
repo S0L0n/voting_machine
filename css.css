@@ -5,15 +5,14 @@ body{background-color: gray; }
 	width:500px; 
  	height:260px;
  	margin-top: 3%;
- 	margin-left: 1%;}
-
+ 	margin-left: 1%;
+}
 #botoes_alinhados{
 
 	position:relative;
 	text-align: center;
   
 }
-
 #botoes{
         background-color:#696464;
 	position:absolute;
@@ -27,16 +26,13 @@ input[type="button"]{
 	color: #fff;
 	padding: 10px;
 	}
-
 #numvoto{
-  
 	position: absolute;
         left: 30%;
         top: 40%;
         text-align: center;
 	padding: 5px;
 }
-
 #branco,#corrigir,#confirmar{
 	background-color: white;
 	margin: 10px;
@@ -52,10 +48,8 @@ input[type="button"]{
 	background-color: #61e30e;
         padding: 10px;
 }
-
 #rodape{
 	position:fixed;
 	top: 90%;
-
-	width: 10%;
+	width: 50%;
 }
